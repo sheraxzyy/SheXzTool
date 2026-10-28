@@ -1,0 +1,53 @@
+{
+  "app": {
+    "tool_name": "SheXzTool",
+    "brand_name": "SheRaXzy Sentinel",
+    "version": "1.0.0",
+    "theme": "black_crimson"
+  },
+  "network": {
+    "default_timeout_seconds": 2.0,
+    "max_ports_per_scan": 100,
+    "max_concurrent_workers": 20,
+    "known_diagnostic_hosts": [
+      {"name": "Cloudflare DNS", "host": "1.1.1.1", "port": 53},
+      {"name": "Google DNS", "host": "8.8.8.8", "port": 53},
+      {"name": "Quad9 DNS", "host": "9.9.9.9", "port": 53}
+    ]
+  },
+  "auditor": {
+    "include_firewall_check": true,
+    "include_defender_check": true,
+    "include_uac_check": true,
+    "include_listening_ports_check": true,
+    "high_risk_ports": [21, 23, 69, 135, 137, 138, 139, 445, 3389, 5985, 5986]
+  },
+  "fim": {
+    "hash_algorithm": "sha256",
+    "ignored_directories": [
+      ".git",
+      "node_modules",
+      "__pycache__",
+      ".venv",
+      "venv",
+      ".idea",
+      ".vscode"
+    ],
+    "ignored_extensions": [
+      ".tmp",
+      ".bak",
+      ".log",
+      ".swp"
+    ],
+    "max_file_size_mb": 100
+  },
+  "reporting": {
+    "output_dir": "reports",
+    "auto_generate_html": true,
+    "auto_generate_json": true
+  },
+  "logging": {
+    "level": "INFO",
+    "log_file": "logs/shexztool.log"
+  }
+}

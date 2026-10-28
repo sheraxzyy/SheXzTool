@@ -1,0 +1,4 @@
+# SheXzTool - Defensive Cybersecurity Toolkit Dependencies
+# Brand: SheRaXzy Sentinel
+rich>=13.7.0
+psutil>=5.9.0

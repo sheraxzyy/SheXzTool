@@ -1,0 +1,28 @@
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# SheXzTool Runtime artifacts
+logs/*.log
+reports/*.html
+reports/*.json
+baselines/*.json
+!baselines/.gitkeep
+!reports/.gitkeep
+!logs/.gitkeep
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+Desktop.ini
